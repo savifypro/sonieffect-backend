@@ -1,0 +1,58 @@
+# FastAPI is the main web framework used to build the backend API
+# It is built on top of Starlette and Pydantic, providing:
+# - extremely high performance (ASGI-based)
+# - automatic OpenAPI & Swagger documentation
+# - type-safe request and response handling
+# Ideal for modern production APIs and microservices
+fastapi
+
+# orjson is a high-performance JSON serializer/deserializer
+# It is significantly faster than Python's built-in json module
+# Used by FastAPI internally (when available) to:
+# - reduce response serialization time
+# - improve API throughput under load
+# Especially important for large JSON responses and real-time APIs
+orjson
+
+# Playwright is used for browser automation and web interaction
+# Common use cases include:
+# - scraping dynamic JavaScript-heavy websites
+# - automated testing
+# - background browser-based tasks
+# It runs in isolated browser contexts and supports Chromium, Firefox, and WebKit
+playwright
+
+# Pydantic provides data validation and settings management
+# It enforces strict typing using Python type hints
+# Used extensively by FastAPI for:
+# - request body validation
+# - response schema enforcement
+# - data parsing and serialization
+# Prevents invalid data from reaching business logic
+pydantic
+
+# Uvicorn is an ASGI server used to run FastAPI in production
+# The [standard] extra installs recommended high-performance dependencies:
+# - uvloop for faster event loops
+# - httptools for faster HTTP parsing
+# - websockets for WebSocket support
+# This setup is suitable for production deployments
+uvicorn[standard]
+
+# WebSockets enable real-time, bi-directional communication
+# Used for:
+# - live updates
+# - streaming data
+# - chat systems
+# - real-time notifications
+# Integrates cleanly with FastAPI and ASGI servers
+websockets
+
+# python-multipart is required to handle multipart/form-data requests
+# Enables support for:
+# - file uploads
+# - form submissions
+# - media transfer endpoints
+# Mandatory when accepting files or form data in FastAPI
+python-multipart
+psutil
