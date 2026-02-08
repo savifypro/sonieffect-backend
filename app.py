@@ -49,8 +49,8 @@ def register_api_routes(app: FastAPI):
     @app.get("/api/check-updates")
     async def check_sonieffect_updates():
         return {
-            "build_number": 5,
-            "new_version": "1.0.2",
+            "build_number": 2,
+            "new_version": "1.0.1",
             "message": "New Update is Available! Please Download the Latest Version.",
         }
 
